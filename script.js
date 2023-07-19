@@ -72,7 +72,7 @@ const facultyCheck = (faculty) => {
 console.log(facultyCheck("Enigneering"));
 
 
-//odd number preint
+//odd number print to console
 const oddNum = (start, end) => {
   for (i = start; i <= end; i++) {
     i % 2 !== 0 && console.log(i);
