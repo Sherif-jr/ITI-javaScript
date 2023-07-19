@@ -78,7 +78,7 @@ const oddNum = (start, end) => {
     i % 2 !== 0 && console.log(i);
   }
 };
-console.log(oddNum(0, 12));
+oddNum(0, 12);
 
 
 //evalute
