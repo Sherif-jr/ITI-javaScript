@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1 id="welcomeMessage"></h1>
+    <h3 id="result" style="padding: 30px; border: 2px solid black;"> </h3>
+    <button id="calculateTwo"
+        onclick="const num1=prompt('Enter the first number'); const num2=prompt('Enter the first number'); sumTwo(num1,num2)">Calculate
+        (sum 2 numbers)</button>
+    <button id="calculateMore"
+        onclick="const numbers= prompt('Enter all numbers seperated by `,`'); sumMore(numbers);">Calculate (sum any
+        numbers)</button>
+    <hr />
+
+    <hr />
+    <h3>8</h3>
+    <p id="userDetails" style="padding: 30px; border: 2px solid black;"> </p>
+    <button onclick="contact()">Print My details</button>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
