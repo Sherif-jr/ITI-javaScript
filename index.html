@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Form section -->
+    <section id="form-section">
+        <form id="form" onsubmit="submitHandler(event)">
+            <div style="display: flex; flex-direction: column; gap:3px">
+                <input placeholder="Enter your name" type="text" id="full-name" required>
+                <p style="font-size: .7em; color: red;" id="nameError"></p>
+            </div>
+            <input placeholder="Enter your email" type="email" name="email" required>
+            <select name="City" title="City" required>
+                <option value="Minia">Minia</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Alexandria">Alexandria</option>
+                <option value="Qena">Qena</option>
+            </select>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <div style="display: flex; flex-direction: column; gap:3px">
+                <input type="password" name="repeatPassword" id="repeated" placeholder="repeat password" required>
+                <p style="font-size: .7em; color: red;" id="passwordError"></p>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <input type="checkbox" name="terms" id="" required>
+                <label style="margin-left: 5px; font-size: .9em;">I accept the terms
+                    and
+                    conditions.</label>
+            </div>
+            <button>Submit</button>
+            <h2 id="submittionStatus"></h2>
+        </form>
+    </section>
+
+    <hr style="border-color: #00000012; padding: 0 50px;" />
+    <!-- Gallery section -->
+    <section id="gallery-section">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin:0px auto;">
+            <h3 style="margin-top:10px; margin-bottom: 20px;">You can trigger play by hovering over the image. It will
+                stop when the mouse leaves.</h3>
+            <div id="gallery-container">
+                <div id="imgs-container">
+                    <img class="img" src="/Assets/1.jpg" alt="">
+                    <img class="img" src="/Assets/2.jpg" alt="">
+                    <img class="img" src="/Assets/3.jpg" alt="">
+                    <img class="img" src="/Assets/1.jpg" alt="">
+                    <img class="img" src="/Assets/2.jpg" alt="">
+                    <img class="img" src="/Assets/3.jpg" alt="">
+                    <img class="img" src="/Assets/1.jpg" alt="">
+                    <img class="img" src="/Assets/2.jpg" alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <button class="control prev">Previous</button>
+                <button class="control play">Play</button>
+                <button class="control stop">Stop</button>
+                <button class="control next">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <hr style="border-color: #00000012; padding: 0 50px;" />
+
+    <!-- opacity Gallery -->
+    <section id="opacityGallery">
+        <h3 style="text-align: center; margin-bottom: 50px;">Hover</h3>
+        <div style="display: flex; align-items: center; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <img class="op-img" src="/Assets/1.jpg" alt="">
+            <img class="op-img" src="/Assets/2.jpg" alt="">
+            <img class="op-img" src="/Assets/3.jpg" alt="">
+        </div>
+    </section>
+
+    <hr style="border-color: #00000012; padding: 0 50px;" />
+    <section id="addRemoveGallery">
+        <h3 style="text-align: center; ">Add random or remove images.</h3>
+        <p style="text-align: center; margin-bottom: 50px; margin-top: 10px;"> Click the button to add a random image.
+            Click any image to delete. </p>
+        <div id="container"
+            style="display: flex; align-items: center; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <img class="op-img img-group" src="/Assets/1.jpg" alt="">
+            <img class="op-img img-group" src="/Assets/2.jpg" alt="">
+            <img class="op-img img-group" src="/Assets/3.jpg" alt="">
+            <div id="newImageBtn" class="op-img newImageBtn">
+                <p>+</p>
+            </div>
+        </div>
+        <p id="counter" style="margin-top: 50px; text-align: center;">
+        </p>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
