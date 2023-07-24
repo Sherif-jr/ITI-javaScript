@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <title>Thank you</title>
+</head>
+
+<body>
+    <section style="display: flex; align-items: center; justify-content: center; height: 50vh;">
+        <p id="mainText" style="font-size: 1.5rem;"></p>
+    </section>
+    <script>
+        const userName = new URLSearchParams(document.location.search).get("name");
+        //method 2:
+        // const params = new URL(document.location).searchParams;
+        // const name = params.get("name");
+        document.getElementById('mainText').innerHTML = `Thank you <strong>${userName}</strong> for submitting the form.`
+
+
+    </script>
+</body>
+
+</html>

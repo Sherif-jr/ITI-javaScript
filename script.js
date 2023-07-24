@@ -65,7 +65,6 @@ repeated.addEventListener("blur", (e) => {
  * @param {Event} e
  */
 const submitHandler = (e) => {
-  e.preventDefault();
   if (
     password.value.length > 0 &&
     password.value === repeated.value &&
@@ -74,6 +73,7 @@ const submitHandler = (e) => {
     submittionStatus.innerText = "Submitted successfully!";
   } else {
     submittionStatus.innerText = "Please correct the validation errors first!";
+    e.preventDefault();
   }
 };
 
