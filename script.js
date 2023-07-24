@@ -181,7 +181,7 @@ setCount();
 newImageBtn.addEventListener("click", () => {
   const newImage = document.createElement("img");
   newImage.classList.add(...["op-img", "img-group"]);
-  newImage.setAttribute("src", `/Assets/${Math.ceil(Math.random() * 3)}.jpg`);
+  newImage.setAttribute("src", `./Assets/${Math.ceil(Math.random() * 3)}.jpg`);
   container.insertBefore(newImage, newImageBtn);
   addOpacityHover(newImage);
   removeOnClick(newImage);
